@@ -27,6 +27,24 @@ PetSocietyApp es una aplicación Android modular (Kotlin + Fragments) que permit
 </ul>
 
 <h2>📂 Estructura del Proyecto </h2>
+app/
+├─ src/
+│  ├─ main/
+│  │  ├─ java/com/example/petapp/
+│  │  │  ├─ MainActivity.kt
+│  │  │  ├─ MenuFragment.kt
+│  │  │  └─ ContentFragment.kt
+│  │  ├─ res/
+│  │  │  ├─ layout/
+│  │  │  │  ├─ activity_main.xml
+│  │  │  │  ├─ fragment_menu.xml
+│  │  │  │  └─ fragment_content.xml
+│  │  │  ├─ drawable/ (round_button_bg.xml, rounded_image_bg.xml, edittext_bg.xml, íconos…)
+│  │  │  └─ values/ids.xml (txtPerfilNombre, imgFoto1, txtDesc1, …)
+│  │  └─ AndroidManifest.xml
+│  ├─ androidTest/ (tests de integración)
+│  └─ test/ (tests unitarios)
+└─ build.gradle.kts
 
 
 <h2>✔️ Cómo usar</h2>
@@ -36,7 +54,8 @@ PetSocietyApp es una aplicación Android modular (Kotlin + Fragments) que permit
   </li>
   <li>
     2. Usa los botones redondos de la izquierda para cambiar entre:
-    <li>
+    <ul>
+       <li>
       Perfil ▶ Datos de la mascota
     </li>
     <li>
@@ -51,8 +70,31 @@ PetSocietyApp es una aplicación Android modular (Kotlin + Fragments) que permit
       <li>
       Botones ▶ Acciones dinámicas
     </li>
-  </li>
+    </ul>  
 </ul>
+
+<h2>🧪 Pruebas</h2>
+<ul>
+  <li>Unitarias:</li>
+  <ul>
+    <li>Validación de cambio de sección sin crash.</li>
+  </ul>
+</ul>
+<ul>
+  <li>Instrumentadas (Espresso):</li>
+  <ul>
+    <li>Clic en btnPerfil muestra txtPerfilNombre.</li>
+    <li>Clic en btnFotos, imgFoto1 despliega txtDesc1.</li>
+  </ul>
+</ul>
+
+
+
+
+
+
+
+
 
 
 
