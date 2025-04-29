@@ -27,6 +27,8 @@ PetSocietyApp es una aplicación Android modular (Kotlin + Fragments) que permit
 </ul>
 
 <h2>📂 Estructura del Proyecto </h2>
+
+```
 app/
 ├─ src/
 │  ├─ main/
@@ -45,6 +47,7 @@ app/
 │  ├─ androidTest/ (tests de integración)
 │  └─ test/ (tests unitarios)
 └─ build.gradle.kts
+```
 
 
 <h2>✔️ Cómo usar</h2>
