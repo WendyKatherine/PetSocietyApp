@@ -44,11 +44,13 @@ class ContentFragment : Fragment() {
                 img.clipToOutline = true
                 img.background = ContextCompat.getDrawable(requireContext(), R.drawable.round_image_bg)
 
-                val nombre = TextView(requireContext())
-                nombre.text = "🐾 Tabata Nala"
-                nombre.textSize = 24f
-                nombre.setTextColor(Color.WHITE)
-                nombre.setPadding(0, 16, 0, 8)
+                val nombre = TextView(requireContext()).apply {
+                    id = R.id.txtPerfilNombre        // <-- necesitas este id en res/values/ids.xml o en tu layout
+                    text = "🐾 Tabata Nala"
+                    textSize = 24f
+                    setTextColor(Color.WHITE)
+                    setPadding(0, 16, 0, 8)
+                }
 
                 val descripcion = TextView(requireContext())
                 descripcion.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut diam velit, vulputate a augue at, ornare commodo justo... Ver más"
@@ -244,35 +246,27 @@ class ContentFragment : Fragment() {
 
 
             "Sección: Fotos" -> {
-                val titulo = TextView(requireContext()).apply {
-                    text = "📷 Galería de Fotos"
-                    textSize = 22f
-                    setTextColor(Color.WHITE)
-                    setPadding(0, 0, 0, 24)
-                    gravity = Gravity.CENTER
-                }
-
-                layoutContenido?.addView(titulo)
-
                 val fotos = listOf(
                     Pair(R.drawable.pet1, "Descripción de la foto 1"),
                     Pair(R.drawable.pet2, "Descripción de la foto 2"),
                     Pair(R.drawable.pet3, "Descripción de la foto 3"),
                     Pair(R.drawable.pet4, "Descripción de la foto 4")
                 )
+                // Listas de IDs que definimos en ids.xml
+                val imgIds  = listOf(R.id.imgFoto1, R.id.imgFoto2, R.id.imgFoto3, R.id.imgFoto4)
+                val descIds = listOf(R.id.txtDesc1, R.id.txtDesc2, R.id.txtDesc3, R.id.txtDesc4)
 
-                fotos.forEach { (imgRes, descripcion) ->
+                fotos.forEachIndexed { index, (imgRes, descripcion) ->
                     val container = LinearLayout(requireContext()).apply {
                         orientation = LinearLayout.VERTICAL
                         layoutParams = LinearLayout.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
                             ViewGroup.LayoutParams.WRAP_CONTENT
-                        ).apply {
-                            setMargins(0, 24, 0, 24)
-                        }
+                        ).apply { setMargins(0,24,0,24) }
                     }
 
                     val image = ImageView(requireContext()).apply {
+                        id = imgIds[index]                              // ← aquí el ID fijo
                         setImageResource(imgRes)
                         layoutParams = LinearLayout.LayoutParams(
                             ViewGroup.LayoutParams.MATCH_PARENT,
@@ -284,9 +278,10 @@ class ContentFragment : Fragment() {
                     }
 
                     val desc = TextView(requireContext()).apply {
+                        id = descIds[index]                             // ← y aquí también
                         text = descripcion
                         visibility = View.GONE
-                        setPadding(16, 8, 16, 16)
+                        setPadding(16,8,16,16)
                         setTextColor(Color.LTGRAY)
                     }
 
@@ -299,6 +294,7 @@ class ContentFragment : Fragment() {
                     layoutContenido?.addView(container)
                 }
             }
+
 
 
             else -> {

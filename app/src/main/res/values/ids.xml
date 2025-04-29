@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="txtPerfilNombre" type="id"/>
+    <item name="imgFoto1" type="id"/>
+    <item name="txtDesc1" type="id"/>
+    <item name="imgFoto2" type="id"/>
+    <item name="txtDesc2" type="id"/>
+    <item name="imgFoto3" type="id"/>
+    <item name="txtDesc3" type="id"/>
+    <item name="imgFoto4" type="id"/>
+    <item name="txtDesc4" type="id"/>
+</resources>

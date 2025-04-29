@@ -43,7 +43,20 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.ui.graphics.android)
+    implementation(libs.androidx.junit.ktx)
+    implementation(libs.androidx.runner)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    androidTestImplementation("androidx.fragment:fragment-testing:1.6.2")
+
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
+
+    // Sustituye hamcrest-library:2.2 por hamcrest-core:1.3
+    androidTestImplementation("org.hamcrest:hamcrest-core:1.3")
+    androidTestImplementation ("org.hamcrest:hamcrest:2.2")
+
 }

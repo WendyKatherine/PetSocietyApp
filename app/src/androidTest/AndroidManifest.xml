@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Sólo para el APK de pruebas -->
+        <activity
+            android:name="androidx.fragment.app.testing.EmptyFragmentActivity"
+            android:exported="true"/>
+    </application>
+</manifest>
