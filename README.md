@@ -89,7 +89,16 @@ app/
     <li>Clic en btnPerfil muestra txtPerfilNombre.</li>
     <li>Clic en btnFotos, imgFoto1 despliega txtDesc1.</li>
   </ul>
+  Some basic Git commands are:
 </ul>
+
+Para ejecutar todas las pruebas:
+
+```
+./gradlew testDebugUnitTest   # Unitarias
+./gradlew connectedAndroidTest # Instrumentadas
+```
+
 
 
 
