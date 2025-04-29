@@ -16,9 +16,17 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        create("release") {
+            keyAlias = "petsocietykey"
+            keyPassword = "+ki9WJ|2Et"
+            storeFile = file("C:/Users/wendy/AndroidStudioProjects/PetApp/petsocietykey.jks")
+            storePassword = "+ki9WJ|2Et"
+        }
+    }
     buildTypes {
         release {
+            signingConfig = signingConfigs["release"]
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
@@ -26,6 +34,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
