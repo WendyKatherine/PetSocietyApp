@@ -101,7 +101,8 @@ Para ejecutar todas las pruebas:
 
 <h2>📦 Descarga la APK</h2>
 
-Puedes descargarte la última versión de la APK desde la sección de [Descargar APK v1.0]([https://github.com/WendyKatherine/PetSocietyApp/releases/download/v1.0/app-release.apk](https://github.com/WendyKatherine/PetSocietyApp/releases/tag/kotlin))
+Puedes descargarte la última versión de la APK desde la sección de [Descargar APK v1.0](https://github.com/WendyKatherine/PetSocietyApp/releases/tag/kotlin)
+
 
 
 
